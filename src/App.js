@@ -12,15 +12,18 @@ const student = {
 }
 
 function App() {
-const [name,setName] = useState('Mason')
+const [name,setName] = useState('Max')
 
 
   return (
    <div> 
-    <Menubar/>
+    <Menubar name={name} setName={setName}/>
   <Main name={name}/>
     <Footer/>
-    <StudentCard student = {student}/>
+    {name ?
+    <StudentCard student = {student}/> :
+    <p>Please login</p>
+}
     </div>
   );
 }
