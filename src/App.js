@@ -4,6 +4,7 @@ import Menubar from './components/Menubar'
 import Main from './components/Main';
 import Footer from './components/Footer';
 import StudentCard from './components/StudentCard';
+import Coffee from './components/Coffee';
 const student = {
   name: 'Khali Gopaul',
   age:37,
@@ -19,11 +20,14 @@ const [name,setName] = useState('Max')
    <div> 
     <Menubar name={name} setName={setName}/>
   <Main name={name}/>
-    <Footer/>
+  
     {name ?
     <StudentCard student = {student}/> :
     <p>Please login</p>
-}
+    
+}<Coffee/>
+<Footer/>
+
     </div>
   );
 }
