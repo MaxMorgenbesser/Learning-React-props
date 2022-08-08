@@ -1,7 +1,9 @@
-export default function Main(){
+export default function Main({name})
+{
     return (
         <main>
-        <h1>Main</h1>
+        <h1>name={name}</h1>
+    
         </main>
     )
 }
